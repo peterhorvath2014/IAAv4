@@ -1,6 +1,6 @@
 package com.iaa.domain.repository;
 
-import com.iaa.domain.model.Entry;
+import com.iaa.domain.model.IaaEntryEntity;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by djpet on 2015. 12. 25..
  */
-public interface IaaRepository extends Repository<Entry, Long> {
-    List<Entry> findAll();
+public interface IaaRepository extends Repository<IaaEntryEntity, Long> {
+    List<IaaEntryEntity> findAll();
 }
 

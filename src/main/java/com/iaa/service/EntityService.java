@@ -1,6 +1,6 @@
 package com.iaa.service;
 
-import com.iaa.domain.model.Entry;
+import com.iaa.domain.model.IaaEntryEntity;
 import com.iaa.domain.repository.IaaRepository;
 import com.iaa.rest.model.EntitiesGetRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class EntityService {
     @Autowired
     private IaaRepository iaaRepository;
 
-    public List<Entry> getEntities(EntitiesGetRequest request) {
+    public List<IaaEntryEntity> getEntities(EntitiesGetRequest request) {
         return iaaRepository.findAll();
     }
 }
