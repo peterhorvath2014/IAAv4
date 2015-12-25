@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class EntitiesRestController {
 
   @RequestMapping(method = RequestMethod.GET)
-  public EntitiesGetResponse getEntities(@RequestBody(required = false) EntitiesGetRequest request) throws JsonProcessingException {
+  public EntitiesGetResponse getEntities(@ModelAttribute EntitiesGetRequest request) throws JsonProcessingException {
     return new EntitiesGetResponse(request);
   }
 
