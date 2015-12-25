@@ -1,10 +1,11 @@
 package com.iaa.service;
 
+import com.iaa.domain.model.Entry;
+import com.iaa.domain.repository.IaaRepository;
 import com.iaa.rest.model.EntitiesGetRequest;
-import com.iaa.service.model.IAAEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,11 +13,10 @@ import java.util.List;
  */
 @Service
 public class EntityService {
-    public List<IAAEntity> getEntities(EntitiesGetRequest request) {
-        IAAEntity entity = new IAAEntity();
-        entity.setEntityId(13276);
-        IAAEntity entity2 = new IAAEntity();
-        entity2.setEntityId(13279);
-        return Arrays.asList(entity, entity2);
+    @Autowired
+    private IaaRepository iaaRepository;
+
+    public List<Entry> getEntities(EntitiesGetRequest request) {
+        return iaaRepository.findAll();
     }
 }

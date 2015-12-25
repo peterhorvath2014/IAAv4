@@ -3,7 +3,7 @@ package com.iaa.service.model;
 /**
  * Created by djpet on 2015. 12. 25..
  */
-public class IAAEntity {
+public class IaaEntity {
     private Integer entityId;
 
     public Integer getEntityId() {
