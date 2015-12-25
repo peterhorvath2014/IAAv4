@@ -2,6 +2,9 @@ package com.iaa.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.iaa.service.model.IAAEntity;
+
+import java.util.List;
 
 /**
  * Created by djpet on 2015. 12. 25..
@@ -10,11 +13,11 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class EntitiesGetResponse {
     private EntitiesGetRequest request;
-    private Integer entityId;
+    private List<IAAEntity> entities;
 
-    public EntitiesGetResponse(EntitiesGetRequest request) {
+    public EntitiesGetResponse(EntitiesGetRequest request, List<IAAEntity> entities) {
         this.request = request;
-        this.entityId = 10;
+        this.entities = entities;
     }
 
     public EntitiesGetRequest getRequest() {
@@ -25,11 +28,11 @@ public class EntitiesGetResponse {
         this.request = request;
     }
 
-    public Integer getEntityId() {
-        return entityId;
+    public List<IAAEntity> getEntities() {
+        return entities;
     }
 
-    public void setEntityId(Integer entityId) {
-        this.entityId = entityId;
+    public void setEntities(List<IAAEntity> entities) {
+        this.entities = entities;
     }
 }
