@@ -1,4 +1,4 @@
-package com.iaa.rest.model;
+package com.iaa.rest.model.request;
 
 /**
  * Created by djpet on 2015. 12. 25..

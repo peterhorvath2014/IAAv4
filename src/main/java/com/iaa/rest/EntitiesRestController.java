@@ -1,8 +1,8 @@
 package com.iaa.rest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.iaa.rest.model.EntitiesGetRequest;
-import com.iaa.rest.model.EntitiesGetResponse;
+import com.iaa.rest.model.request.EntitiesGetRequest;
+import com.iaa.rest.model.response.EntitiesGetResponse;
 import com.iaa.service.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,7 +17,7 @@ public class EntitiesRestController {
 
     @RequestMapping(method = RequestMethod.GET)
     public EntitiesGetResponse getEntities(@ModelAttribute EntitiesGetRequest request) throws JsonProcessingException {
-        return new EntitiesGetResponse(request, service.getEntities(request));
+        return new EntitiesGetResponse(request, service.getLocations(request));
     }
 
 }

@@ -1,7 +1,6 @@
-package com.iaa.rest.model;
+package com.iaa.rest.model.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * Created by djpet on 2015. 12. 25..
